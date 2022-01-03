@@ -47,11 +47,20 @@ public class School {
         students.add(student);
     }
 
-    public void setTotalMoneyEarned(int totalMoneyEarned) {
-        this.totalMoneyEarned = totalMoneyEarned;
+    /**
+     *
+     * @uodateTotalMoneyEarned adds the total money earned by school
+     */
+
+    public void updateTotalMoneyEarned(int MoneyEarned) {
+        totalMoneyEarned += MoneyEarned;
     }
 
-    public void setTotalMoneySpent(int totalMoneySpent) {
-        this.totalMoneySpent = totalMoneySpent;
+    /**
+     *
+     * @updateTotalMoney Spent adds the salary given by school to the teachers
+     */
+    public void updateTotalMoneySpent(int MoneySpent) {
+        totalMoneySpent = totalMoneyEarned - MoneySpent;
     }
 }
