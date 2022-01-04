@@ -67,4 +67,12 @@ public class Student {
         return totalFees -= feesPaid;
     }
 
+    /**
+     *
+     * @if i print an object, there'll be junk values, therefore for custom content of object we use over ride
+     */
+    @Override
+    public String toString(){
+        return "\nStudent's Name: " + name + "\nFees Paid: " + feesPaid;
+    }
 }

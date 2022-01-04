@@ -25,6 +25,11 @@ public class Main {
         School SLBS = new School(teacherList, studentList);
         System.out.println("SLBS has earned PKR " + SLBS.getTotalMoneyEarned());
 
+        //        To add a new teacher and retrieve the list of teachers
+
+        Teacher Akram = new Teacher(3, "Akram", 2200);
+        SLBS.addTeachers(Akram);
+
 //        Making a student pay school fees
 
         Ali.payFees(5000);
@@ -44,5 +49,8 @@ public class Main {
         Alina.recieveSalary(2500);
         System.out.println("************* After SLBS earns salary *************");
         System.out.println("SLBS after spending PKR " + Alina.getSalary() + " has a remaining amount of PKR " + SLBS.getTotalMoneySpent() + " to pay ID: " + Alina.getId() + " her salary.");
+
+        System.out.println(Ali);
+
     }
 }
