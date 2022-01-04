@@ -35,11 +35,13 @@ public class Student {
 
 //    Update fees - Here fees can be paid in installments so the status is updated
 
-    public void updateFeesPaid(int fees){
+    public void payFees(int fees){
         feesPaid += fees;
+        School.updateTotalMoneyEarned(feesPaid);
     }
 
-//    Getting Values
+
+    //    Getting Values
 
     public int getId() {
     return id;
@@ -60,4 +62,9 @@ public class Student {
     public int getTotalFees() {
         return totalFees;
     }
+
+    public int getRemainingFees() {
+        return totalFees -= feesPaid;
+    }
+
 }

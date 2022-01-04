@@ -7,8 +7,8 @@ public class School {
     private List<Teacher> teachers;
     private List<Student> students;
 
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static int totalMoneySpent;
+    private static int totalMoneyEarned; // with static we can access the method directly
 
 //    new school object
 
@@ -52,7 +52,7 @@ public class School {
      * @uodateTotalMoneyEarned adds the total money earned by school
      */
 
-    public void updateTotalMoneyEarned(int MoneyEarned) {
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
         totalMoneyEarned += MoneyEarned;
     }
 
@@ -60,7 +60,7 @@ public class School {
      *
      * @updateTotalMoney Spent adds the salary given by school to the teachers
      */
-    public void updateTotalMoneySpent(int MoneySpent) {
+    public static void updateTotalMoneySpent(int MoneySpent) {
         totalMoneySpent = totalMoneyEarned - MoneySpent;
     }
 }

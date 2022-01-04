@@ -25,6 +25,24 @@ public class Main {
         School SLBS = new School(teacherList, studentList);
         System.out.println("SLBS has earned PKR " + SLBS.getTotalMoneyEarned());
 
+//        Making a student pay school fees
 
+        Ali.payFees(5000);
+        System.out.println("************* After Ali paid fees *************");
+        System.out.println("SLBS has earned PKR " + SLBS.getTotalMoneyEarned());
+
+        System.out.println("\n******************************************************************\n");
+
+        Saad.payFees(5000);
+        System.out.println("************* After Ali paid fees *************");
+        System.out.println("SLBS has earned PKR " + SLBS.getTotalMoneyEarned());
+
+        System.out.println("\n******************************************************************\n");
+
+//        Making SLBS pay teacher's Salary
+
+        Alina.recieveSalary(2500);
+        System.out.println("************* After SLBS earns salary *************");
+        System.out.println("SLBS after spending PKR " + Alina.getSalary() + " has a remaining amount of PKR " + SLBS.getTotalMoneySpent() + " to pay ID: " + Alina.getId() + " her salary.");
     }
 }
